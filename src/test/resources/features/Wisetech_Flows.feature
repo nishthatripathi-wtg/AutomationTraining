@@ -1,4 +1,4 @@
-@debug
+
 Feature: Wisetech Feature Test
 
   Scenario: Navigate to Wisetech website, click on Menu item and verify the results.

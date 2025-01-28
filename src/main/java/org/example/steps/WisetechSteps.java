@@ -1,19 +1,17 @@
-package org.example;
+package org.example.steps;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class WisetechStepDefinition {
+public class WisetechSteps {
     public static final String GET_IN_TOUCH = "Get in touch";
     private static final String WISETECHGLOBAL_COM = "https://www.wisetechglobal.com/";
 
@@ -22,7 +20,7 @@ public class WisetechStepDefinition {
     private static Browser browser;
 
     //TODO: Check on multiple browsers for Playwright
-    @Before
+
     public void setup() {
          playwright = Playwright.create();
          browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
@@ -46,7 +44,7 @@ public class WisetechStepDefinition {
         assertThat(locator).containsText(GET_IN_TOUCH);
     }
 
-    @After
+   
     public void tearDown(){
         page.close();
         browser.close();
