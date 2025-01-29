@@ -1,5 +1,5 @@
-#@debug
+@debug
 Feature: Employee flows
-  Scenario: Navigate to bootcamp website, click on Menu item and verify the results.
+  Scenario: Employee description
     Given I open bootcamp website
-    Then I verify the text
+    Then I verify the text "We're not hiring yet!"
