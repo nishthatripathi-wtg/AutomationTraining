@@ -4,15 +4,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.Context;
-import org.example.components.CommonComponent;
+import org.example.components.section.Common;
 
 public class CommonSteps {
 
-    private final CommonComponent commonComponent;
+    private final Common commonComponent;
 
     public CommonSteps(Context context) {
-        commonComponent = new CommonComponent(context.getInstance());
+        commonComponent = new Common(context.getInstance());
     }
+
     @Given("I open bootcamp website")
     public void iOpenBootcampWebsite() {
         commonComponent.openBootcampWebsite();
@@ -23,7 +24,7 @@ public class CommonSteps {
         commonComponent.clickOn(buttonName);
     }
 
-    @Then("I {string} the dialog box")
+    @Then("^I (accept|reject) the dialog box$")
     public void iTheDialogBox(String decision) {
        commonComponent.theDialogBox(decision);
     }

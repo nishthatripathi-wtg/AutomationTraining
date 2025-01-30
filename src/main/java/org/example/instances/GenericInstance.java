@@ -13,11 +13,9 @@ public interface GenericInstance {
 
     void check(String selector);
 
-    String innerText(String selector);
+    String getInnerText(String selector);
 
     Locator locator(String selector);
-
-    void waitForTimeout(double timeout);
 
     void assertContainsText(String selector, String text);
 
@@ -27,13 +25,10 @@ public interface GenericInstance {
 
     void assertIsDisabled(String selector);
 
-    void assertIsChecked(String selector);
-
     void assertHasClass(String selector, String className);
 
     void assertNotContainsText(String selector, String text);
 
     void tearDown();
-
 }
 

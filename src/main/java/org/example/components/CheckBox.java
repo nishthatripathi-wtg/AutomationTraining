@@ -10,7 +10,7 @@ public class CheckBox extends GenericSelector {
 
     public void check(boolean check) {
         if (check) {
-            instance.check(selector);
+            instance.check(getFormattedSelector());
         }
     }
 }

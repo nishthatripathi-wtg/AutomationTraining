@@ -2,9 +2,8 @@ package org.example.components;
 
 import org.example.instances.GenericInstance;
 
-public class Button extends GenericSelector {
-
-    public Button(GenericInstance instance, String selector) {
+public class MenuItem extends GenericSelector{
+    public MenuItem(GenericInstance instance, String selector) {
         super(instance, selector);
     }
 
